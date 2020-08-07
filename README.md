@@ -57,7 +57,7 @@ To see the example in action please create from the manifest (creates in the
 current namespace):
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/travelping/kube-watch/master/manifests/kube-watch-fruits.yaml
+$ kubectl create -f https://raw.githubusercontent.com/aialferov/kube-watch/master/manifests/kube-watch-fruits.yaml
 ```
 
 Let's look at the pod logs:
@@ -116,7 +116,7 @@ Previous fruits: orange,apple,banana
 Delete the example workloads:
 
 ```
-$ kubectl delete -f https://raw.githubusercontent.com/travelping/kube-watch/master/manifests/kube-watch-fruits.yaml
+$ kubectl delete -f https://raw.githubusercontent.com/aialferov/kube-watch/master/manifests/kube-watch-fruits.yaml
 ```
 
 ### Your Own Solution
@@ -130,7 +130,7 @@ All you need to know is the base image usage. If you run it without arguments
 it provides basic idea:
 
 ```
-$ docker run --rm quay.io/travelping/kube-watch
+$ docker run --rm quay.io/aialferov/kube-watch
 Usage: kube-watch object <Type> <[Namespace/]Name> [Options]
        kube-watch file <FileName> [Options]
        kube-watch version
@@ -173,6 +173,7 @@ Currently this feature works with mounted files only.
 
 ## License
 
+Copyright 2020 Anton Alferov (@aialferov)
 Copyright 2019 Travelping GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -204,5 +205,5 @@ limitations under the License.
 
 [Apache 2.0]: https://opensource.org/licenses/Apache-2.0
 [Apache 2.0 Badge]: https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg?style=flat-square
-[GitHub Releases]: https://github.com/travelping/kube-watch/releases
-[GitHub Release Badge]: https://img.shields.io/github/release/travelping/kube-watch/all.svg?style=flat-square
+[GitHub Releases]: https://github.com/aialferov/kube-watch/releases
+[GitHub Release Badge]: https://img.shields.io/github/release/aialferov/kube-watch/all.svg?style=flat-square

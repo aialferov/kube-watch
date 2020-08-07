@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
       - name: kube-watch-fruits
-        image: quay.io/travelping/kube-watch:latest
+        image: quay.io/aialferov/kube-watch:latest
         imagePullPolicy: Always
         args:
         - object
