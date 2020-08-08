@@ -174,6 +174,7 @@ Currently this feature works with mounted files only.
 ## License
 
 Copyright 2020 Anton Alferov (@aialferov)
+
 Copyright 2019 Travelping GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
