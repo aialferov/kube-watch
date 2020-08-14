@@ -31,15 +31,19 @@ Along with the ConfigMap mentioned above the manifest creates another ConfigMap
 representing an example executable which is a script like this:
 
 ```
-#!/bin/bash
+#!/bin/sh
 
-echo "Channel: $1"
-echo "Current fruits: $2"
-echo "Previous fruits: $3"
+case "$1" in
+    handle) echo "Channel: $2"
+            echo "Current fruits: $3"
+            echo "Previous fruits: $4"
+    ;;
+esac
 ```
 
-Handling executable is invoked with three parameters:
+Handling executable is invoked with four parameters:
 
+ * always "handle"
  * target field content exchange file (channel)
  * current content of the target field
  * previous content of the target field.

@@ -12,10 +12,10 @@ data:
             --handler="kube-watch-pods-show"
 
   kube-watch-pods-show: |
-    #!/bin/bash
+    #!/bin/sh
 
-    echo "Current: $2"
-    echo "Previous: $3"
+    echo "Current: $3"
+    echo "Previous: $4"
 ---
 apiVersion: v1
 kind: ServiceAccount

@@ -1,5 +1,5 @@
 PROJECT = kube-watch
-VERSION = 0.4.1
+VERSION = 0.5.0
 
 REGISTRY = quay.io
 USER = aialferov
@@ -14,7 +14,7 @@ BUILD_ARGS = \
 	--build-arg VERSION=${VERSION} \
 	--build-arg GIT_SHA=${GIT_SHA}
 
-shellcheck:
+check:
 	shellcheck -as bash src/${PROJECT}{,-handle-{channel,file}}
 
 image: image-build

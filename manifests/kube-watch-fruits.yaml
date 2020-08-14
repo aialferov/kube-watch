@@ -11,11 +11,14 @@ metadata:
   name: kube-watch-fruits-scripts
 data:
   handler: |
-    #!/bin/bash
+    #!/bin/sh
 
-    echo "Channel: $1"
-    echo "Current fruits: $2"
-    echo "Previous fruits: $3"
+    case "$1" in
+        handle) echo "Channel: $2"
+                echo "Current fruits: $3"
+                echo "Previous fruits: $4"
+        ;;
+    esac
 ---
 apiVersion: v1
 kind: ServiceAccount
