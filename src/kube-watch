@@ -32,7 +32,7 @@ function main {
             local JsonPath="{}"
             local AllNamespaces=false
 
-            if [ -z "${Type}" ]; then usage; fi
+            if [ -z "${Type}" ]; then show_usage; fi
 
             if [ "${Namespace}/${Name}" != "${NamespacedName}" ]; then
                 Namespace=""
@@ -47,8 +47,8 @@ function main {
 
             shift 2
         ;;
-        version) cat /kube-watch-version ;;
-        *) usage ;;
+        version) cat /kube-watch-version; return ;;
+        *) show_usage ;;
     esac
 
     for Arg in "$@"; do
@@ -157,7 +157,7 @@ function runtime_config_dir {
     echo "/var/run/kube-watch-config"
 }
 
-function usage {
+function show_usage {
     >&2 echo "${Usage}"
     exit 2
 }
